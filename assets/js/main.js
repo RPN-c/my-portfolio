@@ -1,204 +1,154 @@
-// // Mixitup Filter
+/**
+ * RY Pheaneak - Main JavaScript File
+ */
 
-// let mixerProjects = mixitup('.project_container',{
-//     selectors: {
-//         target: '.project_item',
-//     },
-//     animation: {
-//         duration: 300,
-//     }
-// });
+document.addEventListener('DOMContentLoaded', () => {
 
-// // Active Work
+    /* ==================== 1. MOBILE DRAWER NAVIGATION ==================== */
+    const navMenu = document.getElementById('nav-menu');
+    const navToggle = document.getElementById('nav-toggle');
+    const navClose = document.getElementById('nav-close');
+    const navLinks = document.querySelectorAll('.nav_link');
 
-// const linkWork = document.querySelectorAll('.category_btn')
-
-// function activeWork(){
-//     linkWork.forEach((a)=> a.classList.remove('active-work'))
-//     this.classList.add('active-work')
-// }
-
-// linkWork.forEach((a) => a.addEventListener('click',activeWork))
-
-
-// // Testimonials Swiper
-// var testiSwiper = new Swiper('.testimonial_container', {
-//         loop: true,
-//         navigation: {
-//           nextEl: '.swiper-button-next',
-//           prevEl: '.swiper-button-prev',
-//         },
-//         pagination: {
-//           el: '.swiper-pagination',
-//         },
-//         mousewheel: true,
-//         keyboard: true,
-//       });
-
-
-
-// // Contact Form
-
-// const contactForm = document.getElementById('contact-form'),
-//       contactName = document.getElementById('contact-name'),
-//       contactEmail = document.getElementById('contact-email'),
-//       Message = document.getElementById('message'),
-//       contactMessage = document.getElementById('contact-message');
-
-// const sendEmail = (e) => {
-//     e.preventDefault();
-
-//     // ១. ពិនិត្យមើលតម្លៃ Input នីមួយៗ (ថែម .value លើ Message)
-//     if (contactName.value.trim() === '' || contactEmail.value.trim() === '' || Message.value.trim() === '') {
-//         contactMessage.classList.remove('color-light');
-//         contactMessage.classList.add('color-dark');
-//         contactMessage.textContent = 'Please fill in all fields...';
-//         return;
-//     }
-
-//     // ២. ប្តូរមកប្រើ sendForm វិញ (serviceID, templateID, #formID, publicKey)
-//     emailjs.sendForm('service_jzmzfia', 'template_vmi9sdy', '#contact-form', 'i0lNVsMi1KaQQ-h6e')
-//         .then(() => {
-//             // បង្ហាញសារជោគជ័យ
-//             contactMessage.classList.remove('color-dark');
-//             contactMessage.classList.add('color-light');
-//             contactMessage.textContent = 'Message sent successfully';
-
-//             // សម្អាត Input Box ទាំងអស់ក្នុង Form
-//             contactForm.reset();
-
-//             // លុបសារចេញវិញក្រោយ 5 វិនាទី
-//             setTimeout(() => {
-//                 contactMessage.textContent = '';
-//             }, 5000);
-//         })
-//         .catch((error) => {
-//             contactMessage.classList.remove('color-light');
-//             contactMessage.classList.add('color-dark');
-//             contactMessage.textContent = 'Something went wrong, please try again!!';
-//             console.error('EmailJS Error:', error);
-//         });
-// };
-
-// contactForm.addEventListener('submit', sendEmail);
-
-/* ==================== INITIALIZE EMAILJS ==================== */
-emailjs.init({
-    publicKey: "i0lNVsMi1KaQQ-h6e"
-});
-
-/* ==================== SHOW / HIDE MOBILE MENU ==================== */
-const navMenu = document.getElementById('nav-menu');
-const navToggle = document.getElementById('nav-toggle');
-const navClose = document.getElementById('nav-close');
-
-// បើក Menu
-if (navToggle) {
-    navToggle.addEventListener('click', () => {
-        navMenu.classList.add('show-menu');
-    });
-}
-
-// បិទ Menu
-if (navClose) {
-    navClose.addEventListener('click', () => {
-        navMenu.classList.remove('show-menu');
-    });
-}
-
-// បិទ Menu ពេលចុចលើ Link ណាមួយ
-const navLinks = document.querySelectorAll('.nav_link');
-navLinks.forEach(link => {
-    link.addEventListener('click', () => {
-        navMenu.classList.remove('show-menu');
-    });
-});
-
-/* ==================== MIXITUP FILTER PORTFOLIO ==================== */
-let mixerProjects = mixitup('.project_container', {
-    selectors: {
-        target: '.project_item',
-    },
-    animation: {
-        duration: 300,
-    }
-});
-
-// ផ្លាស់ប្តូរ Active Class លើប៊ូតុង Filter
-const linkWork = document.querySelectorAll('.category_btn');
-
-function activeWork() {
-    linkWork.forEach(btn => btn.classList.remove('active-work'));
-    this.classList.add('active-work');
-}
-
-linkWork.forEach(btn => btn.addEventListener('click', activeWork));
-
-/* ==================== SWIPER TESTIMONIALS ==================== */
-const testiSwiper = new Swiper('.testimonial_container', {
-    loop: true,
-    grabCursor: true,
-    navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-    },
-    pagination: {
-        el: '.swiper-pagination',
-        clickable: true,
-    },
-    mousewheel: false,
-    keyboard: true,
-});
-
-/* ==================== CONTACT FORM (EMAILJS) ==================== */
-const contactForm = document.getElementById('contact-form');
-const contactName = document.getElementById('contact-name');
-const contactEmail = document.getElementById('contact-email');
-const contactMessageInput = document.getElementById('message');
-const contactMessage = document.getElementById('contact-message');
-
-const sendEmail = (e) => {
-    e.preventDefault();
-
-    // ពិនិត្យមើល Input នីមួយៗ
-    if (
-        contactName.value.trim() === '' || 
-        contactEmail.value.trim() === '' || 
-        contactMessageInput.value.trim() === ''
-    ) {
-        contactMessage.style.color = '#ff4757';
-        contactMessage.textContent = 'Please fill in all fields...';
-        return;
+    // បើក Mobile Menu
+    if (navToggle) {
+        navToggle.addEventListener('click', () => {
+            navMenu.classList.add('show-menu');
+        });
     }
 
-    // បង្ហាញសញ្ញាកំពុងផ្ញើ
-    contactMessage.style.color = '#eccc68';
-    contactMessage.textContent = 'Sending message... ';
+    // បិទ Mobile Menu
+    if (navClose) {
+        navClose.addEventListener('click', () => {
+            navMenu.classList.remove('show-menu');
+        });
+    }
 
-    // បញ្ជូន Form element ផ្ទាល់ និងដាក់ Public Key ក្នុង Options
-    emailjs.sendForm(
-        'service_uonazfl', 
-        'template_7d8aotx', 
-        contactForm, 
-        {
+    // បិទ Menu ដោយស្វ័យប្រវត្តពេលចុចលើ Link ណាមួយ
+    navLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            navMenu.classList.remove('show-menu');
+        });
+    });
+
+    /* ==================== 2. ACTIVE NAV LINK ON SCROLL ==================== */
+    const sections = document.querySelectorAll('section[id]');
+
+    function scrollActive() {
+        const scrollY = window.pageYOffset;
+
+        sections.forEach(current => {
+            const sectionHeight = current.offsetHeight;
+            const sectionTop = current.offsetTop - 120;
+            const sectionId = current.getAttribute('id');
+            const correspondingLink = document.querySelector(`.nav_menu a[href*='${sectionId}']`);
+
+            if (correspondingLink) {
+                if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
+                    correspondingLink.classList.add('active');
+                } else {
+                    correspondingLink.classList.remove('active');
+                }
+            }
+        });
+    }
+
+    window.addEventListener('scroll', scrollActive);
+
+    /* ==================== 3. PORTFOLIO FILTERING ==================== */
+    const filterButtons = document.querySelectorAll('.category_btn');
+    const projectItems = document.querySelectorAll('.project_item');
+
+    filterButtons.forEach(btn => {
+        btn.addEventListener('click', () => {
+            // ដក active class ចេញពីប៊ូតុងទាំងអស់ រួចដាក់លើប៊ូតុងដែលទើបចុច
+            filterButtons.forEach(b => b.classList.remove('active-work'));
+            btn.classList.add('active-work');
+
+            const filterValue = btn.getAttribute('data-filter');
+
+            projectItems.forEach(item => {
+                const category = item.getAttribute('data-category');
+
+                if (filterValue === 'all' || filterValue === category) {
+                    item.style.display = 'grid';
+                    item.style.opacity = '1';
+                } else {
+                    item.style.display = 'none';
+                    item.style.opacity = '0';
+                }
+            });
+        });
+    });
+
+    /* ==================== 4. TESTIMONIALS SWIPER ==================== */
+    if (typeof Swiper !== 'undefined') {
+        new Swiper('.testimonial_container', {
+            loop: true,
+            grabCursor: true,
+            autoplay: {
+                delay: 4500,
+                disableOnInteraction: false,
+            },
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            }
+        });
+    }
+
+    /* ==================== 5. CONTACT FORM & EMAILJS ==================== */
+    // Initialize EmailJS ដោយប្រើ Public Key របស់អ្នក
+    if (typeof emailjs !== 'undefined') {
+        emailjs.init({
             publicKey: 'i0lNVsMi1KaQQ-h6e'
-        }
-    )
-    .then((res) => {
-        console.log('SUCCESS!', res.status, res.text);
-        contactMessage.style.color = '#2ed573';
-        contactMessage.textContent = 'Message sent successfully';
-        contactForm.reset();
+        });
+    }
 
-        setTimeout(() => {
-            contactMessage.textContent = '';
-        }, 5000);
-    })
-    .catch((error) => {
-        console.error('EmailJS Error Detail:', error);
-        contactMessage.style.color = '#ff4757';
-        contactMessage.textContent = 'Something went wrong, please try again!!';
-    });
-};
+    const contactForm = document.getElementById('contact-form');
+    const contactMessage = document.getElementById('contact-message');
 
-contactForm.addEventListener('submit', sendEmail);
+    if (contactForm) {
+        contactForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+
+            const name = document.getElementById('contact-name').value.trim();
+            const email = document.getElementById('contact-email').value.trim();
+            const message = document.getElementById('message').value.trim();
+
+            if (!name || !email || !message) {
+                contactMessage.style.color = '#f87171';
+                contactMessage.textContent = 'Please fill in all fields.';
+                return;
+            }
+
+            contactMessage.style.color = '#38bdf8';
+            contactMessage.textContent = 'Sending message...';
+
+            if (typeof emailjs !== 'undefined') {
+                emailjs.sendForm('service_uonazfl', 'template_7d8aotx', contactForm)
+                    .then(() => {
+                        contactMessage.style.color = '#4ade80';
+                        contactMessage.textContent = 'Message sent successfully!';
+                        contactForm.reset();
+
+                        setTimeout(() => {
+                            contactMessage.textContent = '';
+                        }, 5000);
+                    })
+                    .catch((error) => {
+                        console.error('EmailJS Error:', error);
+                        contactMessage.style.color = '#f87171';
+                        contactMessage.textContent = 'Failed to send message. Please try again.';
+                    });
+            } else {
+                // Fallback simulation ប្រសិនបើមិនទាន់ភ្ជាប់អ៊ីនធឺណិត
+                setTimeout(() => {
+                    contactMessage.style.color = '#4ade80';
+                    contactMessage.textContent = 'Message sent successfully! (Demo)';
+                    contactForm.reset();
+                }, 1000);
+            }
+        });
+    }
+});

@@ -1,605 +1,460 @@
-   <!DOCTYPE html>
-   <html lang="en">
-   <head>
+<!DOCTYPE html>
+<html lang="en">
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- =========[Remix Icons]========== -->
+    <title>RY Pheaneak - Portfolio</title>
+
+    <!-- Remix Icons -->
     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.9.0/fonts/remixicon.css" rel="stylesheet"/>
 
-    <!-- =========[Swiper CSS========== -->
-     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"
-/>
-    <!-- =========[Link to CSS]========== -->
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+
+    <!-- Custom CSS -->
     <link rel="stylesheet" href="./assets/css/style.css">
-    <title>Portfolio Website</title>
-   </head>
-   <body>
+
+    <link rel="icon" type="image/png" href="./assets/img/favicon.png">
+</head>
+<body>
     <!-- =========[Header]========== -->
-     <header class="header" id="header">
+    <header class="header" id="header">
         <nav class="nav container">
+            <a href="#home" class="nav_logo">RPN_</a>
+
             <div class="nav_menu" id="nav-menu">
                 <ul class="nav_list">
-                    <li>
-                        <a href="#home" class="nav_link active">Welcome</a>
-                    </li>
-
-                    <li>
-                        <a href="#services" class="nav_link">Services</a>
-                    </li>
-
-                    <li>
-                        <a href="#resume" class="nav_link">Resume</a>
-                    </li>
-
-                    <li>
-                        <a href="#portfolio" class="nav_link">Portfolio</a>
-                    </li>
-
-                    <li>
-                        <a href="#blog" class="nav_link">Blog</a>
-                    </li>
-
-                    <li>
-                        <a href="#contact" class="nav_link">Contact</a>
-                    </li>
+                    <li><a href="#home" class="nav_link active">Welcome</a></li>
+                    <li><a href="#about" class="nav_link">About</a></li>
+                    <li><a href="#services" class="nav_link">Services</a></li>
+                    <li><a href="#resume" class="nav_link">Resume</a></li>
+                    <li><a href="#skills" class="nav_link">Skills</a></li>
+                    <li><a href="#portfolio" class="nav_link">Portfolio</a></li>
+                    <li><a href="#testimonials" class="nav_link">Testimonials</a></li>
+                    <li><a href="#blog" class="nav_link">Blog</a></li>
+                    <li><a href="#contact" class="nav_link">Contact</a></li>
                 </ul>
-
                 <div class="nav_close" id="nav-close">
-                    <i class="ri-close-circle-line"></i>
+                    <i class="ri-close-line"></i>
                 </div>
             </div>
+
             <div class="nav_toggle" id="nav-toggle">
-                <i class="ri-menu-fill"></i>
+                <i class="ri-menu-4-line"></i>
             </div>
         </nav>
-     </header>
+    </header>
 
     <!-- =========[Main]========== -->
     <main class="main">
 
         <!-- =========[Home]========== -->
-         <section class="home" id="home">
+        <section class="home" id="home">
             <div class="home_container container grid">
-                <img src="./assets/img/profile.jpg" alt="" class="home_img">
+                <div class="home_img_box">
+                    <img src="./assets/img/profile.jpg" alt="RY Pheaneak" class="home_img" onerror="this.src='https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=700&q=80'">
+                </div>
 
                 <div class="home_data">
+                    <span class="home_greeting">HELLO EVERYONE, I'M</span>
                     <h1 class="home_name">RY Pheaneak</h1>
-                    <p class="home_work">Full Stack Developer, Software Developer</p>
+                    <p class="home_work">Full Stack Developer &amp; Software Developer</p>
+                    
                     <dl class="home_list">
-                        <dt>AGE:</dt>
-                        <dd>21</dd>
-                        <dt>PHONE:</dt>
-                        <dd>(+885) 883 780 166</dd>
-                        <dt>EMAIL:</dt>
-                        <dd>pheaneakry168@gmail.com</dd>
-                        <dt>ADDRESS:</dt>
-                        <dd>Kien Svay, kandal</dd>
+                        <div>
+                            <dt>AGE</dt>
+                            <dd>21</dd>
+                        </div>
+                        <div>
+                            <dt>PHONE</dt>
+                            <dd>(+855) 883 780 166</dd>
+                        </div>
+                        <div>
+                            <dt>EMAIL</dt>
+                            <dd>pheaneakry168@gmail.com</dd>
+                        </div>
+                        <div>
+                            <dt>ADDRESS</dt>
+                            <dd>Kien Svay, Kandal, Cambodia</dd>
+                        </div>
                     </dl>
-                    <div class="home_socials">
-                        <!-- Icon Facebook -->
-                        <a href="https://www.facebook.com/pheanak.ry" target="_blank" class="home_social-link">
-                        <i class="ri-facebook-box-fill"></i>    
-                        </a>
 
-                        <!-- Icon telegram -->
-                        <a href="https://t.me/Neak_7" target="_blank" class="home_social-link">
+                    <div class="home_socials">
+                        <a href="https://www.facebook.com/pheanak.ry" target="_blank" rel="noreferrer" class="home_social-link" title="Facebook">
+                            <i class="ri-facebook-box-fill"></i>
+                        </a>
+                        <a href="https://t.me/Neak_7" target="_blank" rel="noreferrer" class="home_social-link" title="Telegram">
                             <i class="ri-telegram-fill"></i>
                         </a>
-
-                        <!-- Icon github -->
-                        <a href="https://github.com/RPN-c" target="_blank" class="home_social-link">
+                        <a href="https://github.com/RPN-c" target="_blank" rel="noreferrer" class="home_social-link" title="GitHub">
                             <i class="ri-github-fill"></i>
                         </a>
-
                     </div>
                 </div>
             </div>
-         </section>
+        </section>
 
-         <!-- =========[Hello]========== -->
-          <section class="hello section container">
+        <!-- =========[About / Hello]========== -->
+        <section class="hello section container" id="about">
             <h2 class="section_title">Hi_</h2>
-
-            <p class="hello_details text-lg">Passionate Junior Full-Stack Developer with hands-on experience 
-                designing and building interactive web and management applications. 
-                Proficient in HTML, CSS, JavaScript, Python, Java, and UI prototyping with Figma. Adaptable, fast learner, 
-                and enthusiastic about leveraging modern software development practices to build impactful digital solutions.
+            <p class="hello_details">
+                Passionate Junior Full-Stack Developer with hands-on experience designing and building interactive web and management applications. Proficient in HTML, CSS, JavaScript, Python, Java, and UI prototyping with Figma. Adaptable, fast learner, and enthusiastic about leveraging modern software development practices to build impactful digital solutions.
             </p>
-
-            <a href="./assets/img/my_cv.pdf" class="button button_flex text-sm">
-                <i class="ri-download-fill"></i>
-                DOWNLOAD CV
+            <a href="./assets/img/my_cv.pdf" class="button" download>
+                <i class="ri-download-line"></i> DOWNLOAD CV
             </a>
-          </section>
+        </section>
 
-          <!-- =========[Servicces]========== -->
-           <section class="services section container" id="services">
+        <!-- =========[Services]========== -->
+        <section class="services section container" id="services">
             <h2 class="section_title">Services_</h2>
-
             <div class="services_container grid">
                 <div class="services_item">
                     <div class="icon_box">
-                        <img src="./assets/img/web-design.png" alt="" class="services_icon">
-                        <div class="services_dot">
-                            <span class="dot"></span>
-                        </div>
+                        <i class="ri-layout-masonry-line services_icon"></i>
+                        <span class="dot"></span>
                     </div>
-
-                    <h3 class="services_title text-lg">WEB DESIGN</h3>
-                    <p class="services_details">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed autem dolores vero amet inventore aperiam cum voluptas architecto earum saepe.</p>
+                    <h3 class="services_title">WEB DESIGN</h3>
+                    <p class="services_details">Designing aesthetic, user-friendly, and modern UI/UX interfaces that elevate your digital brand identity.</p>
                 </div>
-                <!-- =================================== -->
+
                 <div class="services_item">
                     <div class="icon_box">
-                        <img src="./assets/img/laptop.png" alt="" class="services_icon">
-                        <div class="services_dot">
-                            <span class="dot"></span>
-                        </div>
+                        <i class="ri-code-s-slash-line services_icon"></i>
+                        <span class="dot"></span>
                     </div>
-
-                    <h3 class="services_title text-lg">WEB DEVELOPMENT</h3>
-                    <p class="services_details">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed autem dolores vero amet inventore aperiam cum voluptas architecto earum saepe.</p>
+                    <h3 class="services_title">WEB DEVELOPMENT</h3>
+                    <p class="services_details">Building robust, lightning-fast web applications with modern frontend and backend architectures.</p>
                 </div>
-                <!-- =================================== -->
+
                 <div class="services_item">
                     <div class="icon_box">
-                        <img src="./assets/img/paint-palette.png" alt="" class="services_icon">
-                        <div class="services_dot">
-                            <span class="dot"></span>
-                        </div>
+                        <i class="ri-palette-line services_icon"></i>
+                        <span class="dot"></span>
                     </div>
-
-                    <h3 class="services_title text-lg">CREATIVE DESIGN </h3>
-                    <p class="services_details">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed autem dolores vero amet inventore aperiam cum voluptas architecto earum saepe.</p>
+                    <h3 class="services_title">CREATIVE DESIGN</h3>
+                    <p class="services_details">Crafting impactful visual design graphics, banners, and layouts that engage and resonate with users.</p>
                 </div>
-                <!-- =================================== -->
+
                 <div class="services_item">
                     <div class="icon_box">
-                        <img src="assets/img/smartphone-call.png" alt="" class="services_icon">
-                        <div class="services_dot">
-                            <span class="dot"></span>
-                        </div>
+                        <i class="ri-smartphone-line services_icon"></i>
+                        <span class="dot"></span>
                     </div>
-
-                    <h3 class="services_title text-lg">RESPONSIVE DESIGN</h3>
-                    <p class="services_details">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed autem dolores vero amet inventore aperiam cum voluptas architecto earum saepe.</p>
+                    <h3 class="services_title">RESPONSIVE DESIGN</h3>
+                    <p class="services_details">Delivering 100% pixel-perfect fluid layouts that look stunning on phones, tablets, laptops, and desktops.</p>
                 </div>
-                <!-- =================================== -->
+
                 <div class="services_item">
                     <div class="icon_box">
-                        <img src="./assets/img/verified.png" alt="" class="services_icon">
-                        <div class="services_dot">
-                            <span class="dot"></span>
-                        </div>
+                        <i class="ri-shield-check-line services_icon"></i>
+                        <span class="dot"></span>
                     </div>
-
-                    <h3 class="services_title text-lg">BRANDING IDENTITY</h3>
-                    <p class="services_details">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed autem dolores vero amet inventore aperiam cum voluptas architecto earum saepe.</p>
+                    <h3 class="services_title">BRAND IDENTITY</h3>
+                    <p class="services_details">Building recognizable brand assets, design systems, and identity guides that stand out from competitors.</p>
                 </div>
-                <!-- =================================== -->
+
                 <div class="services_item">
                     <div class="icon_box">
-                        <img src="./assets/img/operator.png" alt="" class="services_icon">
-                        <div class="services_dot">
-                            <span class="dot"></span>
-                        </div>
+                        <i class="ri-customer-service-2-line services_icon"></i>
+                        <span class="dot"></span>
                     </div>
-
-                    <h3 class="services_title text-lg">24/7 SUPPORT</h3>
-                    <p class="services_details">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed autem dolores vero amet inventore aperiam cum voluptas architecto earum saepe.</p>
+                    <h3 class="services_title">24/7 SUPPORT</h3>
+                    <p class="services_details">Providing continuous deployment maintenance, debugging support, and technical updates anytime.</p>
                 </div>
             </div>
-           </section>
+        </section>
 
-           <!-- =========[Resume]========== -->
-            <section class="section container" id="resume">
-                <h2 class="resume_title">Resume_</h2>
-
-                <div class="resume_container grid">
-                    <div class="resume_data">
-                        <h3 class="resume_title text-sm">EDUCATION</h3>
-
-                        <div class="resume_item">
-                            <h3 class="resume_subtitle text-sm">NORTON UNIVERSITY</h3>
-                            <p class="resume_date text-sm">2023 - PRESENT</p>
-                            <p class="resume_discription text-lg">Software Development</p>
-                        </div>
-                        <div class="resume_item">
-                            <h3 class="resume_subtitle text-sm">JAYAVARMAN VII HIGH SHCOOL</h3>
-                            <p class="resume_date text-sm">2019 - 2023</p>
-                            <p class="resume_discription text-lg">STUDENTS</p>
-                        </div>
-                        <div class="resume_item">
-                            <h3 class="resume_subtitle text-sm"></h3>
-                            <p class="resume_date text-sm"></p>
-                            <p class="resume_discription text-lg"></p>
-                        </div>
+        <!-- =========[Resume]========== -->
+        <section class="resume section container" id="resume">
+            <h2 class="section_title">Resume_</h2>
+            <div class="resume_container grid">
+                <div class="resume_data">
+                    <h3 class="resume_category">EDUCATION</h3>
+                    <div class="resume_item">
+                        <h4 class="resume_subtitle">NORTON UNIVERSITY</h4>
+                        <span class="resume_date">2023 - PRESENT</span>
+                        <p class="resume_description">Bachelor Degree in Software Development and Computer Science.</p>
                     </div>
-                    <!-- ============================== -->
+                    <div class="resume_item">
+                        <h4 class="resume_subtitle">JAYAVARMAN VII HIGH SCHOOL</h4>
+                        <span class="resume_date">2019 - 2023</span>
+                        <p class="resume_description">General High School Diploma with focus on Science and Mathematics.</p>
+                    </div>
+                </div>
 
-                    <div class="resume_data">
-                        <h3 class="resume_title text-sm">EMPLOYMENT</h3>
+                <div class="resume_data">
+                    <h3 class="resume_category">EXPERIENCE</h3>
+                    <div class="resume_item">
+                        <h4 class="resume_subtitle">JUNIOR DEVELOPER</h4>
+                        <span class="resume_date">2024 - PRESENT</span>
+                        <p class="resume_description">Collaborating on web applications, REST APIs, and database migrations.</p>
+                    </div>
+                    <div class="resume_item">
+                        <h4 class="resume_subtitle">FREELANCE PROJECTS</h4>
+                        <span class="resume_date">2023 - 2024</span>
+                        <p class="resume_description">Designed and deployed responsive portfolio and landing pages for local businesses.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-                        <div class="resume_item">
-                            <h3 class="resume_subtitle text-sm">NORTON UNIVERSITY</h3>
-                            <p class="resume_date text-sm">2023 - PRESENT</p>
-                            <p class="resume_discription text-lg">Software Development</p>
+        <!-- =========[Skills]========== -->
+        <section class="skills section container" id="skills">
+            <h2 class="section_title">Skills_</h2>
+            <div class="skills_container grid">
+                <div class="skills_content">
+                    <h3 class="skills_subtitle">FRONTEND</h3>
+                    <div class="skills_list">
+                        <div class="skills_data">
+                            <div class="skills_titles">
+                                <span class="skills_name">HTML5 &amp; CSS3</span>
+                                <span class="skills_number">90%</span>
+                            </div>
+                            <div class="skills_bar"><span class="skills_percentage" style="width: 90%;"></span></div>
                         </div>
-                        <div class="resume_item">
-                            <h3 class="resume_subtitle text-sm">JAYAVARMAN VII HIGH SHCOOL</h3>
-                            <p class="resume_date text-sm">2019 - 2023</p>
-                            <p class="resume_discription text-lg">STUDENTS</p>
+                        <div class="skills_data">
+                            <div class="skills_titles">
+                                <span class="skills_name">JavaScript (ES6+)</span>
+                                <span class="skills_number">80%</span>
+                            </div>
+                            <div class="skills_bar"><span class="skills_percentage" style="width: 80%;"></span></div>
                         </div>
-                        <div class="resume_item">
-                            <h3 class="resume_subtitle text-sm"></h3>
-                            <p class="resume_date text-sm"></p>
-                            <p class="resume_discription text-lg"></p>
+                        <div class="skills_data">
+                            <div class="skills_titles">
+                                <span class="skills_name">React.js</span>
+                                <span class="skills_number">75%</span>
+                            </div>
+                            <div class="skills_bar"><span class="skills_percentage" style="width: 75%;"></span></div>
                         </div>
                     </div>
                 </div>
-            </section>
 
-            <!-- =========[Skills]========== -->
-             <section class="section container">
-                <h2 class="section_title">Skills_</h2>
-                <div class="skills_container grid">
-
-                    <div class="skills_content">
-                        <h3 class="skills_title text-sm">FONTEND</h3>
-                        
-                        <div class="skills_list grid">
-                            <div class="skills_data">
-                                <div class="skills_titles">
-                                    <p class="skills_name text-sm">HTML</p>
-                                    <span class="skills_number text-sm">70%</span>
-                                </div>
-
-                                <div class="skills_bar">
-                                    <span class="skills_percentage" style="width: 70%;"></span>
-                                </div>
+                <div class="skills_content">
+                    <h3 class="skills_subtitle">BACKEND &amp; TOOLS</h3>
+                    <div class="skills_list">
+                        <div class="skills_data">
+                            <div class="skills_titles">
+                                <span class="skills_name">Node.js / Express</span>
+                                <span class="skills_number">70%</span>
                             </div>
-                            <!-- ===================================== -->
-                            <div class="skills_data">
-                                <div class="skills_titles">
-                                    <p class="skills_name text-sm">CSS</p>
-                                    <span class="skills_number text-sm">70%</span>
-                                </div>
-
-                                <div class="skills_bar">
-                                    <span class="skills_percentage" style="width: 70%;"></span>
-                                </div>
-                            </div>
-                             <!-- ===================================== -->
-                            <div class="skills_data">
-                                <div class="skills_titles">
-                                    <p class="skills_name text-sm">JavaScript</p>
-                                    <span class="skills_number text-sm">80%</span>
-                                </div>
-
-                                <div class="skills_bar">
-                                    <span class="skills_percentage" style="width: 80%;"></span>
-                                </div>
-                            </div>
-                             <!-- ===================================== -->
-                            <div class="skills_data">
-                                <div class="skills_titles">
-                                    <p class="skills_name text-sm">React</p>
-                                    <span class="skills_number text-sm">80%</span>
-                                </div>
-
-                                <div class="skills_bar">
-                                    <span class="skills_percentage" style="width: 80%;"></span>
-                                </div>
-                            </div>
+                            <div class="skills_bar"><span class="skills_percentage" style="width: 70%;"></span></div>
                         </div>
-                    </div>
-
-                    <!-- =================================== -->
-
-                    <div class="skills_content">
-                        <h3 class="skills_title text-sm">BACKEND</h3>
-                        
-                        <div class="skills_list grid">
-                            <div class="skills_data">
-                                <div class="skills_titles">
-                                    <p class="skills_name text-sm">PHP - Laravel</p>
-                                    <span class="skills_number text-sm">30%</span>
-                                </div>
-
-                                <div class="skills_bar">
-                                    <span class="skills_percentage" style="width: 30%;"></span>
-                                </div>
+                        <div class="skills_data">
+                            <div class="skills_titles">
+                                <span class="skills_name">Python &amp; Java</span>
+                                <span class="skills_number">65%</span>
                             </div>
-                            <!-- ===================================== -->
-                            <div class="skills_data">
-                                <div class="skills_titles">
-                                    <p class="skills_name text-sm">Node.js</p>
-                                    <span class="skills_number text-sm">60%</span>
-                                </div>
-
-                                <div class="skills_bar">
-                                    <span class="skills_percentage" style="width: 60%;"></span>
-                                </div>
+                            <div class="skills_bar"><span class="skills_percentage" style="width: 65%;"></span></div>
+                        </div>
+                        <div class="skills_data">
+                            <div class="skills_titles">
+                                <span class="skills_name">MySQL &amp; Git/GitHub</span>
+                                <span class="skills_number">75%</span>
                             </div>
-                             <!-- ===================================== -->
-                            <div class="skills_data">
-                                <div class="skills_titles">
-                                    <p class="skills_name text-sm">Python</p>
-                                    <span class="skills_number text-sm">40%</span>
-                                </div>
-
-                                <div class="skills_bar">
-                                    <span class="skills_percentage" style="width: 40%;"></span>
-                                </div>
-                            </div>
-                             <!-- ===================================== -->
-                            <div class="skills_data">
-                                <div class="skills_titles">
-                                    <p class="skills_name text-sm">MySQL - Oracle</p>
-                                    <span class="skills_number text-sm">50%</span>
-                                </div>
-
-                                <div class="skills_bar">
-                                    <span class="skills_percentage" style="width: 50%;"></span>
-                                </div>
-                            </div>
+                            <div class="skills_bar"><span class="skills_percentage" style="width: 75%;"></span></div>
                         </div>
                     </div>
                 </div>
-             </section>
+            </div>
+        </section>
 
-             <!-- =========[Projects]========== -->
-              <section class="section work container" id="portfolio">
-                <h2 class="section_title">Work_</h2>
-                <div class="project_categories">
-                    <button class="category_btn text-xs active-work" data-filter="all">ALL</button>
-                    <button class="category_btn text-xs" data-filter=".app">MOBILE APP</button>
-                    <button class="category_btn text-xs" data-filter=".web">WEB-SITES</button>
-                    <button class="category_btn text-xs" data-filter=".landing">LANDING PAGE</button>
-                </div>
+        <!-- =========[Projects]========== -->
+        <section class="work section container" id="portfolio">
+            <h2 class="section_title">Work_</h2>
+            <div class="project_categories">
+                <button class="category_btn active-work" data-filter="all">ALL</button>
+                <button class="category_btn" data-filter="app">MOBILE APP</button>
+                <button class="category_btn" data-filter="web">WEBSITES</button>
+                <button class="category_btn" data-filter="desktop">DESKTOP</button>
+            </div>
 
-                <div class="project_container grid">
-                    <div class="project_item grid mix app">
-                        <img src="./assets/img/project-1.png" alt="" class="project_img">
-
-                        <div class="project_data">
-                            <h3 class="project-title text-lg">Khmer Traffic laws mobile app</h3>
-                            <p class="project_discription">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Totam ipsam laborum neque repellendus eius! Tempora labore eligendi nemo. Hic, officia.</p>
-                            <h4 class="project_stack text-xs">USED STACK:</h4>
-                            <ul class="tags text-sm">
-                                <li>Flutter</li>
-                                <li>Dart</li>
-                                <li>Swift</li>
-                                <li>C++</li>
-                            </ul>
-
-                            <a href="" class="project_link text-sm">https://github.com/RPN-c/khmer-traffic-laws</a>
-                        </div>
+            <div class="project_container grid">
+                <!-- Project 1 -->
+                <div class="project_item grid" data-category="app">
+                    <div class="project_img_wrap">
+                        <img src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&w=800&q=80" alt="Khmer Traffic Laws App" class="project_img">
                     </div>
-
-                    <!-- ======================================== -->
-
-                    <div class="project_item grid mix web">
-                        <img src="./assets/img/project-2.png" alt="" class="project_img">
-
-                        <div class="project_data">
-                            <h3 class="project-title text-lg">Website Resort</h3>
-                            <p class="project_discription">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Totam ipsam laborum neque repellendus eius! Tempora labore eligendi nemo. Hic, officia.</p>
-                            <h4 class="project_stack text-xs">USED STACK:</h4>
-                            <ul class="tags text-sm">
-                                <li>HTML5</li>
-                                <li>CSS</li>
-                                <li>JavaScript</li>
-                            </ul>
-
-                            <a href="" class="project_link text-sm">https://resort-rpn.vercel.app/</a>
-                        </div>
-                    </div>
-
-                    <!-- ======================================== -->
-
-                    <div class="project_item grid mix landing">
-                        <img src="./assets/img/project-3.png" alt="" class="project_img">
-
-                        <div class="project_data">
-                            <h3 class="project-title text-lg">Library System Apache</h3>
-                            <p class="project_discription">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Totam ipsam laborum neque repellendus eius! Tempora labore eligendi nemo. Hic, officia.</p>
-                            <h4 class="project_stack text-xs">USED STACK:</h4>
-                            <ul class="tags text-sm">
-                                <li>Java</li>
-                            </ul>
-
-                            <a href="" class="project_link text-sm">https://github.com/RPN-c/Library_System-Apache</a>
-                        </div>
+                    <div class="project_data">
+                        <h3 class="project_title">Khmer Traffic Laws Mobile App</h3>
+                        <p class="project_description">A cross-platform mobile application providing comprehensive Cambodian road rules, interactive traffic sign quizzes, and fine calculation guides.</p>
+                        <h4 class="project_stack_title">USED STACK:</h4>
+                        <ul class="tags">
+                            <li>Flutter</li>
+                            <li>Dart</li>
+                            <li>SQLite</li>
+                        </ul>
+                        <a href="https://github.com/RPN-c/khmer-traffic-laws" target="_blank" rel="noreferrer" class="project_link">View Repository &rarr;</a>
                     </div>
                 </div>
-              </section>
 
-              <!-- =========[Testimonials]========== -->
-               <section class="testimonials section">
-                <div class="testimonial_bg">
-                    <div class="testimonial_icon">
-                        <i class="ri-double-quotes-r"></i>
+                <!-- Project 2 -->
+                <div class="project_item grid" data-category="web">
+                    <div class="project_img_wrap">
+                        <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=800&q=80" alt="Resort Booking Website" class="project_img">
                     </div>
-
-                    <div class="swiper testimonial_container container">
-                        <div class="swiper-wrapper">
-                            <div class="swiper-slide testimonial_item">
-                                <h3 class="author_name text-lg">Pheanak RY</h3>
-                                <p class="author_project">Project: Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                                    Suscipit, et harum ab enim repudiandae consequuntur!</p>
-                                <div class="ruler"></div>
-                                <p class="testimonial_discription text-lg">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                                    Ut sapiente unde praesentium placeat porro reiciendis voluptatum odit natus tempora, sint nam! Fuga, 
-                                    vel corrupti!</p>
-                            </div>
-                            <!-- ============================ -->
-                            <div class="swiper-slide testimonial_item">
-                                <h3 class="author_name text-lg">Pheanak RY</h3>
-                                <p class="author_project">Project: Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                                    Suscipit, et harum ab enim repudiandae consequuntur!</p>
-                                <div class="ruler"></div>
-                                <p class="testimonial_discription text-lg">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                                    Ut sapiente unde praesentium placeat porro reiciendis voluptatum odit natus tempora, sint nam! Fuga, 
-                                    vel corrupti!</p>
-                            </div>
-                            <!-- ============================ -->
-                            <div class="swiper-slide testimonial_item">
-                                <h3 class="author_name text-lg">Pheanak RY</h3>
-                                <p class="author_project">Project: Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                                    Suscipit, et harum ab enim repudiandae consequuntur!</p>
-                                <div class="ruler"></div>
-                                <p class="testimonial_discription text-lg">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                                    Ut sapiente unde praesentium placeat porro reiciendis voluptatum odit natus tempora, sint nam! Fuga, 
-                                    vel corrupti!</p>
-                            </div>
-                        </div>
-
-                        <div class="swiper-button-next">
-                            <img src="./assets/img/arrow-next.svg" alt="">
-                        </div>
-                        <div class="swiper-button-prev">
-                            <img src="./assets/img/arrow-prev.svg" alt="">
-                        </div>
-                        <div class="swiper-pagination"></div>
+                    <div class="project_data">
+                        <h3 class="project_title">Luxury Resort Booking Website</h3>
+                        <p class="project_description">A modern landing and online reservation web platform featuring responsive gallery view, interactive room selector, and dynamic pricing previews.</p>
+                        <h4 class="project_stack_title">USED STACK:</h4>
+                        <ul class="tags">
+                            <li>HTML5</li>
+                            <li>CSS3</li>
+                            <li>JavaScript</li>
+                        </ul>
+                        <a href="https://resort-rpn.vercel.app/" target="_blank" rel="noreferrer" class="project_link">Live Demo &rarr;</a>
                     </div>
                 </div>
-               </section>
 
-               <!-- =========[Blog]========== -->
-                <section class="blog section container" id="blog">
-                    <h2 class="secction_title">Lastest Posts_</h2>
+                <!-- Project 3 -->
+                <div class="project_item grid" data-category="desktop">
+                    <div class="project_img_wrap">
+                        <img src="https://images.unsplash.com/photo-1521587760476-6c12a4b040da?auto=format&fit=crop&w=800&q=80" alt="Library Management System" class="project_img">
+                    </div>
+                    <div class="project_data">
+                        <h3 class="project_title">Library Management System</h3>
+                        <p class="project_description">Full-featured desktop software built with Apache NetBeans to manage book cataloging, member subscriptions, automated checkout, and fine logs.</p>
+                        <h4 class="project_stack_title">USED STACK:</h4>
+                        <ul class="tags">
+                            <li>Java</li>
+                            <li>Swing UI</li>
+                            <li>MySQL</li>
+                        </ul>
+                        <a href="https://github.com/RPN-c/Library_System-Apache" target="_blank" rel="noreferrer" class="project_link">View Repository &rarr;</a>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-                    <div class="post_container grid">
-                        <div class="post_card">
-                            <img src="./assets/img/blog-1.png" alt="" class="post_img">
+        <!-- =========[Testimonials]========== -->
+        <section class="testimonials section" id="testimonials">
+            <div class="testimonial_bg">
+                <div class="testimonial_icon">
+                    <i class="ri-double-quotes-r"></i>
+                </div>
 
-                            <div class="post_content">
-                                <p class="post_date text-xs">21, 08, 2026</p>
-                                <h3 class="post_title text-sm">Java</h3>
-                                <p class="post_discription text-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                                    Atque aspernatur cumque mollitia deleniti, accusamus unde...</p>
-                            </div>
+                <div class="swiper testimonial_container container">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide testimonial_item">
+                            <h3 class="author_name">Pheanak RY</h3>
+                            <p class="author_project">Project: Resort Booking Platform</p>
+                            <div class="ruler"></div>
+                            <p class="testimonial_description">"Pheaneak demonstrated strong dedication, clean UI principles, and delivered code right on schedule. Highly recommended for web and software development!"</p>
                         </div>
-                        <!-- =============================== -->
-                        <div class="post_card">
-                            <img src="./assets/img/blog-2.png" alt="" class="post_img">
-
-                            <div class="post_content">
-                                <p class="post_date text-xs">22, 08, 2026</p>
-                                <h3 class="post_title text-sm">Fontend</h3>
-                                <p class="post_discription text-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                                    Atque aspernatur cumque mollitia deleniti, accusamus unde...</p>
-                            </div>
-                        </div>
-                        <!-- =============================== -->
-                        <div class="post_card">
-                            <img src="./assets/img/blog-3.png" alt="" class="post_img">
-
-                            <div class="post_content">
-                                <p class="post_date text-xs">23, 08, 2026</p>
-                                <h3 class="post_title text-sm">Backend</h3>
-                                <p class="post_discription text-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                                    Atque aspernatur cumque mollitia deleniti, accusamus unde...</p>
-                            </div>
+                        <div class="swiper-slide testimonial_item">
+                            <h3 class="author_name">Hun Menghai</h3>
+                            <p class="author_project">Project: Mobile Traffic Laws</p>
+                            <div class="ruler"></div>
+                            <p class="testimonial_description">"Great problem solver! His expertise in responsive styling and mobile layout made our application perform flawlessly across all devices."</p>
                         </div>
                     </div>
-                </section>
+                    <div class="swiper-pagination"></div>
+                </div>
+            </div>
+        </section>
 
-                <!-- =========[Contact]========== -->
-                 <section class="contact section" id="contact">
-                    <div class="contact_content container">
-                        <h2 class="section_title">Get In Touch_</h2>
+        <!-- =========[Blog]========== -->
+        <section class="blog section container" id="blog">
+            <h2 class="section_title">Latest Posts_</h2>
+            <div class="post_container grid">
+                <article class="post_card">
+                    <img src="./assets/img/blog-1.png" alt="Java Architecture" class="post_img" onerror="this.src='https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&w=600&q=80'">
+                    <div class="post_content">
+                        <span class="post_date">AUG 21, 2026</span>
+                        <h3 class="post_title">Java Object-Oriented Best Practices</h3>
+                        <p class="post_description">Discover how applying SOLID principles in your Java projects can make your software scalable, clean, and easily maintainable.</p>
+                    </div>
+                </article>
 
-                        <div class="contact_container grid">
-                            <div class="contact_info">
-                                <dl class="contact_list">
-                                    <dt>Phone:</dt>
-                                    <dd>(+885) 883 730 166</dd>
-                                    <dt>Telegram:</dt>
-                                    <dd>088 378 0166</dd>
-                                    <dt>Email:</dt>
-                                    <dd>pheaneakry168@gmail.com</dd>
-                                </dl>
+                <article class="post_card">
+                    <img src="./assets/img/blog-2.png" alt="Frontend tips" class="post_img" onerror="this.src='https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?auto=format&fit=crop&w=600&q=80'">
+                    <div class="post_content">
+                        <span class="post_date">AUG 22, 2026</span>
+                        <h3 class="post_title">Mastering Responsive Design with CSS Grid</h3>
+                        <p class="post_description">Learn modern layout techniques without relying on excessive CSS media queries using minmax(), repeat(), and clamp().</p>
+                    </div>
+                </article>
 
-                                <ul class="contact_social">
-                                    <li>
-                                        <a href="https://www.facebook.com/pheanak.ry" class="contact_social-link">Facebook</a>
-                                    </li>
-                                    <li>
-                                        <a href="https://t.me/Neak_7" class="contact_social-link">Telegram</a>
-                                    </li>
-                                    <li>
-                                        <a href="https://github.com/RPN-c" class="contact_social-link">Github</a>
-                                    </li>
-                                </ul>
+                <article class="post_card">
+                    <img src="./assets/img/blog-3.png" alt="Backend engineering" class="post_img" onerror="this.src='https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=600&q=80'">
+                    <div class="post_content">
+                        <span class="post_date">AUG 23, 2026</span>
+                        <h3 class="post_title">Building Resilient RESTful APIs</h3>
+                        <p class="post_description">A breakdown of authentication, error handling, rate limiting, and database indexing for Node.js backends.</p>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- =========[Contact]========== -->
+        <section class="contact section" id="contact">
+            <div class="contact_content container">
+                <h2 class="section_title light_title">Get In Touch_</h2>
+
+                <div class="contact_container grid">
+                    <div class="contact_info">
+                        <dl class="contact_list">
+                            <div>
+                                <dt>Phone:</dt>
+                                <dd>(+855) 883 780 166</dd>
                             </div>
-
-                            <div class="contact_form">
-                                <p class="contact_form-title">Or just write me a letter here_</p>
-                                <form action="" id="contact-form">
-                                    <div class="contact_input-div">
-                                        <input 
-                                        type="text" 
-                                        name="name"
-                                        class="contact_input" 
-                                        id="contact-name" 
-                                        placeholder="Your name"
-                                        />
-                                    </div>
-                                    <div class="contact_input-div">
-                                        <input 
-                                        type="email" 
-                                        name="email"
-                                        class="contact_input" 
-                                        id="contact-email" 
-                                        placeholder="Your e-mail"
-                                        />
-                                    </div>
-                                    <div class="contact_input-div">
-                                        <textarea 
-                                        name="message"
-                                        placeholder="Type the message here..." 
-                                        class="contact_input" 
-                                        id="message"
-                                        cols="30"
-                                        rows="10" 
-                                        ></textarea>
-                                    </div>
-
-                                    <p class="contact_messsage text-sm" id="contact-message">
-                                        
-                                    </p>
-
-                                    <button type="submit" class="button contact_button">SEND</button>
-                                </form>
-
-                                <p class="footer_copy">
-                                    &copy; 2026 RPN&reg; All Rights Reserved
-                                </p>
+                            <div>
+                                <dt>Telegram:</dt>
+                                <dd>@Neak_7</dd>
                             </div>
+                            <div>
+                                <dt>Email:</dt>
+                                <dd>pheaneakry168@gmail.com</dd>
+                            </div>
+                            <div>
+                                <dt>Location:</dt>
+                                <dd>Kandal, Cambodia</dd>
+                            </div>
+                        </dl>
+
+                        <div class="contact_social">
+                            <a href="https://www.facebook.com/pheanak.ry" target="_blank" rel="noreferrer" class="contact_social-link"><i class="ri-facebook-circle-fill"></i> Facebook</a>
+                            <a href="https://t.me/Neak_7" target="_blank" rel="noreferrer" class="contact_social-link"><i class="ri-telegram-fill"></i> Telegram</a>
+                            <a href="https://github.com/RPN-c" target="_blank" rel="noreferrer" class="contact_social-link"><i class="ri-github-fill"></i> GitHub</a>
                         </div>
                     </div>
-                 </section>
 
+                    <div class="contact_form">
+                        <p class="contact_form-title">Or just drop me a message here_</p>
+                        <form id="contact-form">
+                            <div class="contact_input-div">
+                                <input type="text" name="name" class="contact_input" id="contact-name" placeholder="Your name" required />
+                            </div>
+                            <div class="contact_input-div">
+                                <input type="email" name="email" class="contact_input" id="contact-email" placeholder="Your e-mail" required />
+                            </div>
+                            <div class="contact_input-div">
+                                <textarea name="message" placeholder="Type your message here..." class="contact_input" id="message" rows="5" required></textarea>
+                            </div>
 
+                            <p class="contact_message" id="contact-message"></p>
+
+                            <button type="submit" class="button contact_button">
+                                <i class="ri-send-plane-fill"></i> SEND MESSAGE
+                            </button>
+                        </form>
+
+                        <p class="footer_copy">
+                            &copy; 2026 RPN&reg; All Rights Reserved. Built with passion.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
-    
 
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
-<!-- Mixitup -->
-<script src="./assets/js/mixitup.min.js"></script>
+    <!-- EmailJS SDK -->
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 
-<!-- Swiper js-->
- <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
-
- <!-- Email js -->
-  <script
-  type="text/javascript"
-  src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
-</script>
-
-<!-- Main js -->
+    <!-- Main JavaScript -->
     <script src="./assets/js/main.js"></script>
-   </body>
-   </html>
+</body>
+</html>
